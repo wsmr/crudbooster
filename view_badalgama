@@ -1,0 +1,148 @@
+SELECT 
+CASE WHEN hour1 = 0 THEN COUNT(hour1) END AS 1,
+CASE WHEN hour2 = 0 THEN COUNT(hour2) END AS 2,
+CASE WHEN hour3 = 0 THEN COUNT(hour3) END AS 3,
+CASE WHEN hour4 = 0 THEN COUNT(hour4) END AS 4,
+CASE WHEN hour5 = 0 THEN COUNT(hour5) END AS 5,
+CASE WHEN hour6 = 0 THEN COUNT(hour6) END AS 6,
+CASE WHEN hour7 = 0 THEN COUNT(hour7) END AS 7,
+CASE WHEN hour8 = 0 THEN COUNT(hour8) END AS 8,
+CASE WHEN hour9 = 0 THEN COUNT(hour9) END AS 9,
+CASE WHEN hour10 = 0 THEN COUNT(hour10) END AS 10,
+CASE WHEN hour11 = 0 THEN COUNT(hour11) END AS 11,
+CASE WHEN hour12 = 0 THEN COUNT(hour12) END AS 12,
+CASE WHEN hour13 = 0 THEN COUNT(hour13) END AS 13,
+CASE WHEN hour14 = 0 THEN COUNT(hour14) END AS 14,
+CASE WHEN hour15 = 0 THEN COUNT(hour15) END AS 15,
+CASE WHEN hour16 = 0 THEN COUNT(hour16) END AS 16,
+CASE WHEN hour17 = 0 THEN COUNT(hour17) END AS 17,
+CASE WHEN hour18 = 0 THEN COUNT(hour18) END AS 18,
+CASE WHEN hour19 = 0 THEN COUNT(hour19) END AS 19,
+CASE WHEN hour20 = 0 THEN COUNT(hour20) END AS 20,
+CASE WHEN hour21 = 0 THEN COUNT(hour21) END AS 21,
+CASE WHEN hour22 = 0 THEN COUNT(hour22) END AS 22,
+CASE WHEN hour23 = 0 THEN COUNT(hour23) END AS 23,
+CASE WHEN hour24 = 0 THEN COUNT(hour24) END AS 24
+FROM day_status 
+GROUP BY hour1,hour2,hour3,hour4,hour5,hour6,hour7,hour8,hour9,hour10,
+hour11,hour12,hour13,hour14,hour15,hour16,hour17,hour18,hour19,hour20,
+hour21,hour22,hour23,hour24
+
+
+SELECT 
+CASE WHEN hour1 = 0 THEN COUNT(hour1) END ,
+CASE WHEN hour2 = 0 THEN COUNT(hour2) END ,
+CASE WHEN hour3 = 0 THEN COUNT(hour3) END ,
+CASE WHEN hour4 = 0 THEN COUNT(hour4) END ,
+CASE WHEN hour5 = 0 THEN COUNT(hour5) END ,
+CASE WHEN hour6 = 0 THEN COUNT(hour6) END ,
+CASE WHEN hour7 = 0 THEN COUNT(hour7) END ,
+CASE WHEN hour8 = 0 THEN COUNT(hour8) END ,
+CASE WHEN hour9 = 0 THEN COUNT(hour9) END ,
+CASE WHEN hour10 = 0 THEN COUNT(hour10) END ,
+CASE WHEN hour11 = 0 THEN COUNT(hour11) END ,
+CASE WHEN hour12 = 0 THEN COUNT(hour12) END ,
+CASE WHEN hour13 = 0 THEN COUNT(hour13) END ,
+CASE WHEN hour14 = 0 THEN COUNT(hour14) END ,
+CASE WHEN hour15 = 0 THEN COUNT(hour15) END ,
+CASE WHEN hour16 = 0 THEN COUNT(hour16) END ,
+CASE WHEN hour17 = 0 THEN COUNT(hour17) END ,
+CASE WHEN hour18 = 0 THEN COUNT(hour18) END ,
+CASE WHEN hour19 = 0 THEN COUNT(hour19) END ,
+CASE WHEN hour20 = 0 THEN COUNT(hour20) END ,
+CASE WHEN hour21 = 0 THEN COUNT(hour21) END ,
+CASE WHEN hour22 = 0 THEN COUNT(hour22) END ,
+CASE WHEN hour23 = 0 THEN COUNT(hour23) END ,
+CASE WHEN hour24 = 0 THEN COUNT(hour24) END 
+FROM day_status 
+GROUP BY hour1,hour2,hour3,hour4,hour5,hour6,hour7,hour8,hour9,hour10,
+hour11,hour12,hour13,hour14,hour15,hour16,hour17,hour18,hour19,hour20,
+hour21,hour22,hour23,hour24
+
+SELECT Date, (COUNT(t.Hour1) + COUNT(t.Hour2) + COUNT(t.Hour3) + COUNT(t.Hour4)  + COUNT(t.Hour5) + COUNT(t.Hour6) + COUNT(t.Hour7)  + COUNT(t.Hour8) + COUNT(t.Hour9) + COUNT(t.Hour10)  + COUNT(t.Hour11) + COUNT(t.Hour12) + COUNT(t.Hour13) + COUNT(t.Hour14)  + COUNT(t.Hour15) + COUNT(t.Hour16) + COUNT(t.Hour17)  + COUNT(t.Hour18) + COUNT(t.Hour19) + COUNT(t.Hour20)  + COUNT(t.Hour21) + COUNT(t.Hour22) + COUNT(t.Hour23) + COUNT(t.Hour24)) AS Count_Sunny FROM (
+SELECT 
+CASE WHEN hour1 = 0 THEN (hour1) END AS Hour1,
+CASE WHEN hour2 = 0 THEN (hour2) END AS Hour2,
+CASE WHEN hour3 = 0 THEN (hour3) END AS Hour3,
+CASE WHEN hour4 = 0 THEN (hour4) END AS Hour4,
+CASE WHEN hour5 = 0 THEN (hour5) END AS Hour5,
+CASE WHEN hour6 = 0 THEN (hour6) END AS Hour6,
+CASE WHEN hour7 = 0 THEN (hour7) END AS Hour7,
+CASE WHEN hour8 = 0 THEN (hour8) END AS Hour8,
+CASE WHEN hour9 = 0 THEN (hour9) END AS Hour9,
+CASE WHEN hour10 = 0 THEN (hour10) END AS Hour10,
+CASE WHEN hour11 = 0 THEN (hour11) END AS Hour11,
+CASE WHEN hour12 = 0 THEN (hour12) END AS Hour12,
+CASE WHEN hour13 = 0 THEN (hour13) END AS Hour13,
+CASE WHEN hour14 = 0 THEN (hour14) END AS Hour14,
+CASE WHEN hour15 = 0 THEN (hour15) END AS Hour15,
+CASE WHEN hour16 = 0 THEN (hour16) END AS Hour16,
+CASE WHEN hour17 = 0 THEN (hour17) END AS Hour17,
+CASE WHEN hour18 = 0 THEN (hour18) END AS Hour18,
+CASE WHEN hour19 = 0 THEN (hour19) END AS Hour19,
+CASE WHEN hour20 = 0 THEN (hour20) END AS Hour20,
+CASE WHEN hour21 = 0 THEN (hour21) END AS Hour21,
+CASE WHEN hour22 = 0 THEN (hour22) END AS Hour22,
+CASE WHEN hour23 = 0 THEN (hour23) END AS Hour23,
+CASE WHEN hour24 = 0 THEN (hour24) END AS Hour24,
+date 
+FROM day_status) t
+Group BY date
+
+
+
+SELECT (COUNT(t.Hour1) + COUNT(t.Hour2)) AS Count_Sunny FROM ( SELECT CASE WHEN hour1 = 0 THEN (hour1) END AS Hour1, CASE WHEN hour2 = 0 THEN (hour2) END AS Hour2 FROM day_status) t
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+int_1_lable":"Basic_data_Int_label_test1",
+"int_1_type":"Basic_data_Int_Type_test1",
+"int_2_visible":"false",
+"int_2_lable":"Basic_data_Int_label_test2",
+"int_2_type":"Basic_data_Int_Type_test2",
+"int_3_visible":"false",
+"int_3_lable":"Basic_data_Int_label_test3",
+"int_3_type":"Basic_data_Int_Type_test3",
+"date_1_visible":"false",
+"date_1_lable":"Basic_data_Date_label_test1",
+"date_1_type":"Basic_data_Date_Type_test1",
+"date_2_visible":"false",
+"date_2_lable":"Basic_data_Date_label_test2",
+"date_2_type":"Basic_data_Date_Type_test2",
+"date_3_visible":"false",
+"date_3_lable":"Basic_data_Date_label_test3","date_3_type":"Basic_data_Date_Type_test3","varchar_1_visible":"false","varchar_1_lable":"Basic_data_Varchar_label_test1","varchar_1_type":"Basic_data_Varchar_Type_test1","varchar_2_visible":"false","varchar_2_lable":"Basic_data_Varchar_label_test2","varchar_2_type":"Basic_data_Varchar_Type_test2","varchar_3_visible":"false","varchar_3_lable":"Basic_data_Varchar_label_test3","varchar_3_type":"Basic_data_Varchar_Type_test3","textarea_1_visible":"false","textarea_1_lable":"Basic_data_Textarea_label_test1","textarea_1_type":"Basic_data_Textarea_Type_test1","textarea_2_visible":"false","textarea_2_lable":"Basic_data_Textarea_label_test2","textarea_2_type":"Basic_data_Textarea_Type_test2","textarea_3_visible":"false","textarea_3_lable":"Basic_data_Textarea_label_test3","textarea_3_type":"Basic_data_Textarea_Type_test3","attachment_1_visible":"false","attachment_1_lable":"Basic_data_Attachment_label_test1","attachment_1_type":"Basic_data_Attachment_Type_test1","attachment_2_visible":"false","attachment_2_lable":"Basic_data_Attachment_label_test2","attachment_2_type":"Basic_data_Attachment_Type_test2","attachment_3_visible":"false","attachment_3_lable":"Basic_data_Attachment_label_test3","attachment_3_type":"Basic_data_Attachment_Type_test3","active":1,"editor":1,"updated":"2019-02-11 16:36:37","ref_id":"1","description":"physical progress milco project","rg_id":2},{"id":2,"bd_id":3,"int_1_visible":"false","int_1_lable":"test lable","int_1_type":"","int_2_visible":"false","int_2_lable":"","int_2_type":"","int_3_visible":"false","int_3_lable":"","int_3_type":"","date_1_visible":"false","date_1_lable":"","date_1_type":"","date_2_visible":"false","date_2_lable":"","date_2_type":"","date_3_visible":"false","date_3_lable":"","date_3_type":"","varchar_1_visible":"false","varchar_1_lable":"","varchar_1_type":"","varchar_2_visible":"false","varchar_2_lable":"","varchar_2_type":"","varchar_3_visible":"false","varchar_3_lable":"","varchar_3_type":"","textarea_1_visible":"false","textarea_1_lable":"","textarea_1_type":"","textarea_2_visible":"false","textarea_2_lable":"","textarea_2_type":"","textarea_3_visible":"false","textarea_3_lable":"","textarea_3_type":"","attachment_1_visible":"false","attachment_1_lable":"","attachment_1_type":"","attachment_2_visible":"false","attachment_2_lable":"","attachment_2_type":"","attachment_3_visible":"false","attachment_3_lable":"","attachment_3_type":"","active":1,"editor":1,"updated":"2019-02-11 16:36:37","ref_id":"1","description":"physical progress milco project","rg_id":2}] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
